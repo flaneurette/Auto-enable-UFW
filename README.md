@@ -58,6 +58,8 @@ Add this line to it:
 
 `DPkg::Post-Invoke { "if [ -x /usr/local/bin/check_ufw.sh ]; then /usr/local/bin/check_ufw.sh; fi"; };`
 
+Save it:
+
 `Ctrl+O`
 
 `Ctrl+X`
