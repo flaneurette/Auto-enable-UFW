@@ -44,7 +44,7 @@ Here are the reasons. See UFW bug report that I filed: https://bugs.launchpad.ne
 
 ---
 
-# Extra: APT Hook.
+# Extra: Post APT Hook.
 
 To automatically check after each APT call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
 
@@ -63,4 +63,26 @@ Save it:
 `Ctrl+O`
 
 `Ctrl+X`
+
+# Extra: Add APT update hook:
+
+This runs after every `apt update` command:
+
+`sudo touch /etc/apt/apt.conf.d/99-ufw-update-hook`
+
+`sudo nano /etc/apt/apt.conf.d/99-ufw-update-hook`
+
+Add this line to it:
+
+`APT::Update::Post-Invoke { "if [ -x /usr/local/bin/check_ufw.sh ]; then /usr/local/bin/check_ufw.sh; fi"; };`
+
+Save it:
+
+`Ctrl+O`
+
+`Ctrl+X`
+
+# Done.
+Enjoy.
+
 
