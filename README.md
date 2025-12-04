@@ -11,7 +11,7 @@ Checks every 5 minutes if the UFW firewall is running.
 
 - If UFW is missing, installs it.
 
-- bIf UFW is installed but inactive, enables it.
+- If UFW is installed but inactive, enables it.
 
 - Only sends an email notification to the site owner if something fails or UFW had to be installed/enabled.
 
