@@ -41,3 +41,24 @@ Paste at the end:
 
 # Why
 Here are the reasons. See UFW bug report that I filed: https://bugs.launchpad.net/ubuntu/+source/ufw/+bug/2133823
+
+---
+
+# Extra: APT Hook.
+
+To automatically check after each APT call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
+
+Install hook:
+
+`sudo touch /etc/apt/apt.conf.d/99-ufw-check`
+
+`sudo nano /etc/apt/apt.conf.d/99-ufw-check`
+
+Add this line to it:
+
+`DPkg::Post-Invoke { "if [ -x /usr/local/bin/check_ufw.sh ]; then /usr/local/bin/check_ufw.sh; fi"; };`
+
+`Ctrl+O`
+
+`Ctrl+X`
+
