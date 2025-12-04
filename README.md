@@ -34,5 +34,7 @@ paste the check_ufw.sh script
 `sudo chmod +x /usr/local/bin/check_ufw.sh`
 
 `sudo crontab -e`
-6
+
+Paste at the end:
+
 `*/5 * * * * /usr/local/bin/check_ufw.sh`
