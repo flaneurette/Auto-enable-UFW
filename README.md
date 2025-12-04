@@ -44,7 +44,7 @@ Here are the reasons. See UFW bug report that I filed: https://bugs.launchpad.ne
 
 ---
 
-# Extra: Post APT Hook.
+## Extra: Post APT Hook.
 
 To automatically check after each APT call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
 
@@ -64,7 +64,7 @@ Save it:
 
 `Ctrl+X`
 
-# Extra: Add APT update hook:
+## Extra: Add APT update hook:
 
 This runs after every `apt update` command:
 
@@ -82,7 +82,7 @@ Save it:
 
 `Ctrl+X`
 
-# Done.
+## Done.
 Enjoy.
 
 
