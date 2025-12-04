@@ -9,11 +9,11 @@ To prevent this, check_ufw.sh is a Bash script that:
 
 Checks every 5 minutes if the UFW firewall is running.
 
-If UFW is missing, installs it.
+- If UFW is missing, installs it.
 
-If UFW is installed but inactive, enables it.
+- bIf UFW is installed but inactive, enables it.
 
-Only sends an email notification to the site owner if something fails or UFW had to be installed/enabled.
+- Only sends an email notification to the site owner if something fails or UFW had to be installed/enabled.
 
 You can customize the email address directly in the script.
 
