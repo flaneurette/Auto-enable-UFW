@@ -44,7 +44,7 @@ Here are the reasons: see UFW bug report that I filed: https://bugs.launchpad.ne
 
 ---
 
-## Extra: Post DPkg Hook.
+## Extra: Post DPkg hook.
 
 To automatically check after each DPkg call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
 
