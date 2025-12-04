@@ -44,7 +44,7 @@ Here are the reasons. See UFW bug report that I filed: https://bugs.launchpad.ne
 
 ---
 
-## Extra: Post APT Hook.
+## Extra: Post DPkg Hook.
 
 To automatically check after each APT call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
 
