@@ -1,7 +1,7 @@
 # Auto-enable-UFW
 Installs and enables UFW if uninstalled or disabled.
 
-# Issue and why.
+# Issue it fixes
 
 Some Linux packages can **silently** uninstall UFW because they conflict with it or are not compatible. For example, the package `netfilter-persistent` can remove UFW during installation, leaving your system without an active firewall!
 
