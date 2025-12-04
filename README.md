@@ -40,13 +40,13 @@ Paste at the end:
 `*/5 * * * * /usr/local/bin/check_ufw.sh`
 
 # Why
-Here are the reasons. See UFW bug report that I filed: https://bugs.launchpad.net/ubuntu/+source/ufw/+bug/2133823
+Here are the reasons: see UFW bug report that I filed: https://bugs.launchpad.net/ubuntu/+source/ufw/+bug/2133823
 
 ---
 
 ## Extra: Post DPkg Hook.
 
-To automatically check after each APT call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
+To automatically check after each DPkg call, we can run it automatically with a hook invoking it immediately (while keeping the cron). This runs instantly in mere seconds. If your infra structure is critical I recommened adding this hook:
 
 Install hook:
 
@@ -66,7 +66,7 @@ Save it:
 
 ## Extra: Add APT update hook:
 
-This runs after every `apt update` command:
+This runs after every `apt update` command instantly in mere seconds. If your infra structure is critical I recommened adding this hook as well:
 
 `sudo touch /etc/apt/apt.conf.d/99-ufw-update-hook`
 
