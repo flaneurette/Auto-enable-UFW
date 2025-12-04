@@ -4,7 +4,6 @@ Installs and enables UFW if uninstalled or disabled.
 # Issue and why.
 
 Some Linux packages can **silently** uninstall UFW because they conflict with it or are not compatible. For example, the package `netfilter-persistent` can remove UFW during installation, leaving your system without an active firewall!
-See UFW bug report that I filed: https://bugs.launchpad.net/ubuntu/+source/ufw/+bug/2133823
 
 To prevent this, check_ufw.sh is a Bash script that:
 
@@ -39,3 +38,6 @@ paste the check_ufw.sh script
 Paste at the end:
 
 `*/5 * * * * /usr/local/bin/check_ufw.sh`
+
+# Why
+Here are the reasons. See UFW bug report that I filed: https://bugs.launchpad.net/ubuntu/+source/ufw/+bug/2133823
